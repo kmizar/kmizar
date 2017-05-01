@@ -4,11 +4,11 @@
 <h2><b>{{ postObj.title }}</b></h2>
 <ul class="list-inline">
 	<li><a href="/flows/{{ postObj.flow }}">
-		<span class="label label-warning">{{ postObj.flow.name }}</span>
+		<span class="label label-warning">{{ postObj.flow.name|capfirst }}</span>
 	</a></li>
 	{% for tag in postObj.tags.all %}
 	<li><a href="/tags/{{ tag }}">
-		<span class="label label-default">{{ tag.name }}</span>
+		<span class="label label-default">{{ tag.name|capfirst }}</span>
 	</a></li>
 	{% endfor %}
 </ul>
