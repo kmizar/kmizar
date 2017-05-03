@@ -1,10 +1,13 @@
-<span class="text-gray">
+
+<span class="text-gray space-small">
 	<small>{{ postObj.published_date|date }}</small>
 </span>
-<h2><b>{{ postObj.title }}</b></h2>
+
+<h1><strong>{{ postObj.title }}</strong></h1>
+
 <ul class="list-inline">
 	<li><a href="/flows/{{ postObj.flow }}">
-		<span class="label label-warning">{{ postObj.flow.name|capfirst }}</span>
+		<span class="label label-flow">{{ postObj.flow.name|capfirst }}</span>
 	</a></li>
 	{% for tag in postObj.tags.all %}
 	<li><a href="/tags/{{ tag }}">
@@ -12,6 +15,7 @@
 	</a></li>
 	{% endfor %}
 </ul>
-<div style="padding-bottom:10px">
+
+<div style="padding-bottom:30px">
 	{{ postObj.text|safe }}
 </div>

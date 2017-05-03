@@ -1,22 +1,22 @@
-<div style="padding-bottom:40px">
-	<span class="text-muted">
+<div style="padding-bottom:50px">
+	<span class="text-muted space-small">
 		<small>{{ postObj.published_date|date }}</small>
 	</span>
 	<h2>
 		<small>
-			<a href="/post/{{ postObj.id }}/" class="text-primary"><b>{{ postObj.title }}</b></a>
+			<a href="/post/{{ postObj.id }}/" class="text-primary">{{ postObj.title }}</a>
 		</small>
 	</h2>
 	<ul class="list-inline">
 		<li>
 			<a href="/flows/{{ postObj.flow }}">
-				<span class="label label-warning">{{ postObj.flow.name|capfirst }}</span>
+				<span class="label label-flow space-small">{{ postObj.flow.name|capfirst }}</span>
 			</a>
 		</li>
 		{% for tag in postObj.tags.all %}
 		<li>
 			<a href="/tags/{{ tag }}">
-				<span class="label label-default">{{ tag.name|capfirst }}</span>
+				<span class="label label-default space-small">{{ tag.name|capfirst }}</span>
 			</a>
 		</li>
 		{% endfor %}
@@ -24,5 +24,5 @@
 	<div class="post">
 		{{ postObj.text|truncatewords:100|safe }}
 	</div>
-	<a type="button" class="btn btn-default" href="/post/{{ postObj.id }}/">Подробнее...</a>
+	<a type="button" class="btn btn-default space-small" href="/post/{{ postObj.id }}/">Подробнее <span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>

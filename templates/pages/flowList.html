@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Хабы{% endblock %}
+{% block title %}{{ page_title }} / kmizar.ru{% endblock %}
 
 {% block body_content %}
-<div class="row">
+
+<div class="list-menu">
+  <h1><small>{{ page_header }}</small></h1>
+  <hr>
+</div>
+
+
+<div class="row" style="padding-bottom:30px">
   <div class="col-md-9">
     <ul class="media-list">
       {% for groupObj in groupObj_list %}

@@ -1,21 +1,19 @@
 
 <li class="media">
   <div class="pull-left">
-    <img class="media-object" src="{{ groupObj.icon.url }}" alt="..." width="48" height="48">
+    <img class="media-object vignette" src="{{ groupObj.icon.url }}" alt="{{ groupObj.name|capfirst }}" width="190" height="140">
   </div>
   <div class="media-body">
-    <h4 class="media-heading">
-      <a href="/groups/{{ groupObj.sys_name }}">{{ groupObj.name|capfirst }}</a>
-    </h4>
-    <div>
-      <small>{{ groupObj.description|capfirst }}</small>
+    <h2 class="media-heading">
+      <small><a href="/groups/{{ groupObj.sys_name }}">{{ groupObj.name|capfirst }}</a></small>
+    </h2>
+    <div style="padding-top:16px">
+      {{ groupObj.description|capfirst }}
     </div>
-    <div>
-      <small>
+    <div style="padding-top:8px">
         {% for tag in groupObj.tags%}
-        <a href="/tags/{{ tag }}">{{ tag.name|capfirst }}</a>
+        <a href="/tags/{{ tag }}" class="space-small">{{ tag.name|capfirst }}</a>
         {% endfor %}
-      </small>
     </div>
   </div>
 </li>
