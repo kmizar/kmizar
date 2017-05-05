@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page_title }} / vercon-journal.ru{% endblock %}
+{% block title %}{{ page_title|capfirst }} / vercon-journal.ru{% endblock %}
 
 
 {% block body_content %}
 
 <div class="list-menu">
-  <h1><small>{{ page_header }}</small></h1>
+  <h1><small>{{ page_title|capfirst }}</small></h1>
   <hr>
 </div>
 
