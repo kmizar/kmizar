@@ -2,6 +2,16 @@
 
 {% block title %}{{ page_title }} / vercon-journal.ru{% endblock %}
 
+{% block description %}
+Рубрики идей для Вашего дома. vercon-journal.com
+{% endblock %}
+
+{% block keywords %}
+
+{% endblock %}
+{% for groupObj in groupObj_list %}
+{{ groupObj.name|capfirst }},
+{% endfor %}
 {% block body_content %}
 
 <div class="list-menu">

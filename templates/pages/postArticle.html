@@ -2,6 +2,16 @@
 
 {% block title %}{% block title|capfirst %}{{ postObj.title }} / vercon-journal.ru{% endblock %}{% endblock %}
 
+{% block description %}
+{{ postObj|truncatewords:50 }}
+{% endblock %}
+
+{% block keywords %}
+{% for tag in postObj.tags.all %}
+{{ tag.name|capfirst }},
+{% endfor %}
+{% endblock %}
+
 {% block body_content %}
   {% include "blocks/article_long.html" with postObj=postObj %}
 {% endblock %}
