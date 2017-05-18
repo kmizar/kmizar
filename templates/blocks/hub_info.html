@@ -11,7 +11,7 @@
       {{ groupObj.description|capfirst }}
     </div>
     <div style="padding-top:8px">
-        {% for tag in groupObj.tags%}
+        {% for tag in groupObj.tags.all %}
         <a href="/tags/{{ tag }}" class="space-small">{{ tag.name|capfirst }}</a>
         {% endfor %}
     </div>
