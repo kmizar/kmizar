@@ -3,7 +3,7 @@
     <h3>Разделы:</h3>
 
     {% for flowObj in flowObj_list %}
-      <a href="{{ flowObj.sys_name }}"><p style="padding-left:15px;padding-top:5px">{{ flowObj.name }}</p></a>
+      <a href="{{ flowObj.sys_name }}"><p style="padding-left:15px;padding-top:5px">{{ flowObj.name|capfirst }}</p></a>
     {% endfor %}
 
   </div>
