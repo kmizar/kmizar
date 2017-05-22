@@ -14,7 +14,7 @@
 		{% for tag in postObj.tags.all %}
 		<li>
 			<a href="/tags/{{ tag }}">
-				<span class="label label-default space-small">{{ tag.name|capfirst }}</span>
+				<span class="label label-default space-small">#{{ tag.name|capfirst }}</span>
 			</a>
 		</li>
 		{% endfor %}
