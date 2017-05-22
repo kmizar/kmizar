@@ -5,14 +5,14 @@
   </div>
   <div class="media-body">
     <h2 class="media-heading">
-      <small><a href="/groups/{{ groupObj.sys_name }}">{{ groupObj.name|capfirst }}</a></small>
+      <a href="/groups/{{ groupObj.sys_name }}">{{ groupObj.name|capfirst }}</a>
     </h2>
     <div style="padding-top:16px lead">
       {{ groupObj.description|capfirst }}
     </div>
     <div style="padding-top:8px">
         {% for tag in groupObj.tags.all %}
-        <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag }}" class="space-small"><small>#{{ tag.name|capfirst }}</small></a>
+        <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag }}" class="space-small"><small><strong>#{{ tag.name|capfirst }}</strong></small></a>
         {% endfor %}
     </div>
   </div>
