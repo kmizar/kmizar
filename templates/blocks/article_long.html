@@ -1,21 +1,22 @@
+<div itemscope itemtype="http://schema.org/Article">
+	<span class="text-gray space-small" itemprop="dateCreated">
+		<small>{{ postObj.published_date|date }}</small>
+	</span>
 
-<span class="text-gray space-small">
-	<small>{{ postObj.published_date|date }}</small>
-</span>
+	<h1 itemprop="headline"><strong>{{ postObj.title }}</strong></h1>
 
-<h1><strong>{{ postObj.title }}</strong></h1>
+	<ul class="list-inline" itemprop="keywords">
+		<li><a href="/flows/{{ postObj.flow }}">
+			<span class="label label-flow">{{ postObj.flow.name|capfirst }}</span>
+		</a></li>
+		{% for tag in postObj.tags.all %}
+		<li><a href="/tags/{{ tag }}">
+			<span class="label label-default">{{ tag.name|capfirst }}</span>
+		</a></li>
+		{% endfor %}
+	</ul>
 
-<ul class="list-inline">
-	<li><a href="/flows/{{ postObj.flow }}">
-		<span class="label label-flow">{{ postObj.flow.name|capfirst }}</span>
-	</a></li>
-	{% for tag in postObj.tags.all %}
-	<li><a href="/tags/{{ tag }}">
-		<span class="label label-default">{{ tag.name|capfirst }}</span>
-	</a></li>
-	{% endfor %}
-</ul>
-
-<div class="article-body">
-	{{ postObj.text|safe }}
+	<div class="article-body" itemprop="articleBody">
+		{{ postObj.text|safe }}
+	</div>
 </div>
