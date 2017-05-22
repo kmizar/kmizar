@@ -6,3 +6,4 @@
 ## Div блок, для обращения внимания
 - создаем div-контейнер
 - прописываем классы: alert alert-warning (alert-info, alert-danger, alert-success)
+- добавляем h3 как заголовок блока
