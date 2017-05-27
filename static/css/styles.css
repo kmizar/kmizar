@@ -9414,5 +9414,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 .footer{
   margin-top: 50px;
-
+}
+.logo{
+  width:160px;
+  margin-top: -3px;
 }
