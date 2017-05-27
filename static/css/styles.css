@@ -3984,6 +3984,7 @@ tbody.collapse.show {
 
 .navbar-toggler:focus, .navbar-toggler:hover {
   text-decoration: none;
+  outline: 0;
 }
 
 .navbar-toggler-icon {
