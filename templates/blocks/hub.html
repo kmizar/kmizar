@@ -1,7 +1,7 @@
 <div class="media">
 
   <div class="media-body-small">
-    <a class="" href="#">
+    <a class="" href="/groups-tags/{{ groupObj.sys_name }}-{{ tag }}">
       <img src="{{ groupObj.icon.url }}" alt="{{ groupObj.name|capfirst }}" width="64px">
     </a>
   </div>
@@ -23,5 +23,5 @@
       <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag }}" class="space-small"><small><strong>#{{ tag.name|capfirst }}</strong></small></a>
     {% endfor %}
   </div>
-  
+
 </div>
