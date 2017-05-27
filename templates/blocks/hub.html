@@ -1,0 +1,23 @@
+<div class="media">
+  <div class="media-body-small">
+    <a class="" href="#">
+      <img src="{{ groupObj.icon.url }}" alt="{{ groupObj.name|capfirst }}" width="64px">
+    </a>
+  </div>
+  <div class="media-body-large">
+    <a href="/groups/{{ groupObj.sys_name }}">
+      <h2>{{ groupObj.name|capfirst }}</h2>
+    </a>
+    <p class="media-hide">{{ groupObj.description|capfirst }}</p>
+    <p class="media-show">
+      {% for tag in groupObj.tags.all %}
+        <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag }}" class="space-small"><small><strong>#{{ tag.name|capfirst }}</strong></small></a>
+      {% endfor %}
+    </p>
+  </div>
+  <div class="media-body media-hide">
+    {% for tag in groupObj.tags.all %}
+      <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag }}" class="space-small"><small><strong>#{{ tag.name|capfirst }}</strong></small></a>
+    {% endfor %}
+  </div>
+</div>

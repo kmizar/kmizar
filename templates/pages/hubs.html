@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block Content %}
+<div class="container" style="width:100%; max-width:1280px;">
+  <div class="row">
+    <div class="col-lg-9 col-md-12">
+      <h1 class="text-left" style="padding-bottom:30px">рубрики</h1>
+      {% for groupObj in groupObj_list %}
+        <hr>
+        {% include "blocks/hub.html" with groupObj=groupObj %}
+      {% endfor %}
+      <hr>
+    </div>
+    <div class="col-lg-3 col-md-12">
+      {% include "blocks/flows.html" with groupObj=groupObj %}
+    </div>
+  </div>
+</div>
+{% endblock %}

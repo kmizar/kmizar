@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block Content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9 col-md-12">
+      {% include "blocks/article.html" with postObj=postObj %}
+    </div>
+    <div class="col-lg-3 col-md-12">
+      qwer
+    </div>
+  </div>
+</div>
+{% endblock %}

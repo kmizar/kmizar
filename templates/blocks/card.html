@@ -1,0 +1,23 @@
+<div class="card">
+  <a href="/post/{{ postObj.id }}/">
+    <img class="card-img-top img-fluid" src="{{ postObj.image.url }}" alt="Card image cap">
+  </a>
+  <div class="card-block">
+    <a href="/flows/{{ postObj.flow }}">
+      <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
+    </a>
+    <a href="/post/{{ postObj.id }}/">
+      <h2 class="card-title"><small>{{ postObj.title }}</small></h2>
+    </a>
+    <p class="card-text">
+      {% for tag in postObj.tags.all %}
+        <a href="/tags/{{ tag }}">
+          <small>#{{ tag.name|capfirst }}</small>
+        </a>
+      {% endfor %}
+    </p>
+    <p class="card-text">
+      <span style="color:#4db6ac"><small>{{ postObj.published_date|date }}</small></span>
+    </p>
+  </div>
+</div>

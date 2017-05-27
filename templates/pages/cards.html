@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block Content %}
+
+  {% if not postObj_list %}
+  <div class="container">
+    <div class="alert alert-warning" role="alert">Похоже, что ничего <strong>нет</strong>.</div>
+  </div>
+  {% else %}
+    <div class="container" style="width:100%; max-width:1280px;">
+
+      <div class="row" style="padding-bottom:30px">
+        <div class="col">
+          <h1 class="text-right">последние статьи</h1>
+        </div>
+      </div>
+
+      <div class="card-columns">
+        {% for postObj in postObj_list %}
+          {% include "blocks/card.html" with postObj=postObj %}
+        {% endfor %}
+      </div>
+
+      <nav aria-label="page navigation" style="margin-top:30px">
+        <ul class="pagination">
+          {% if postObj_list.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.previous_page_number }}">Туда</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.previous_page_number }}">{{ postObj_list.previous_page_number }}</a></li>
+          {% else %}
+            <li class="page-item disabled"><a class="page-link">Туда</a></li>
+          {% endif %}
+          <li class="page-item active"><a class="page-link" href="{{ postObj_list.number }}">{{ postObj_list.number }}</a></li>
+          {% if postObj_list.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.next_page_number }}">{{ postObj_list.next_page_number }}</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.next_page_number }}">Сюда</a></li>
+          {% else %}
+            <li class="page-item disabled"><a class="page-link">Сюда</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+
+    </div>
+  {% endif %}
+{% endblock %}
