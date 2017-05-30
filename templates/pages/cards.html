@@ -16,11 +16,14 @@
           <h1 class="text-right">последние статьи</h1>
         </div>
       </div>
-
-      <div class="card-columns">
-        {% for postObj in postObj_list %}
-          {% include "blocks/card.html" with postObj=postObj %}
-        {% endfor %}
+      <div class="row">
+        <div class="col">
+          <div class="card-columns">
+            {% for postObj in postObj_list %}
+              {% include "blocks/card.html" with postObj=postObj %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
 
       <nav aria-label="page navigation" style="margin-top:30px">
