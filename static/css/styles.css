@@ -9401,6 +9401,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .article-content h2{
   color:#177bbb;
 }
+.article-content .alert-warning{
+  font-size: 0.9em;
+}
 .media h2{
   color:#4c5d6e;
 }
