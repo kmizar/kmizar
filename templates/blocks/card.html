@@ -15,7 +15,7 @@
 
     <p class="card-text">
       {% for tag in postObj.tags.all %}
-        <a href="/tags/{{ tag }}">
+        <a href="/tags/{{ tag }}" class="space-small">
           <small>#{{ tag.name|capfirst }}</small>
         </a>
       {% endfor %}

@@ -9419,3 +9419,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   width:160px;
   margin-top: -3px;
 }
+.space-small{
+  letter-spacing: 0.5px;
+}
