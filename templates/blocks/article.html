@@ -3,7 +3,7 @@
 <h1><strong>{{ postObj.title }}</strong></h1>
 
 {% for tag in postObj.tags.all %}
-  <a href="/tags/{{ tag }}">
+  <a href="/tags/{{ tag }}" class="space-small">
     #{{ tag.name|capfirst }}
   </a>
 {% endfor %}
