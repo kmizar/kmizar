@@ -9409,16 +9409,16 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 .flows-menu{
   color:#177bbb;
-  padding-left: 15px;
+  padding-left: 1em;
 }
 .flows-menu:hover{
   color: #52aee8;
 }
 .footer{
-  margin-top: 50px;
+  margin-top: 3em;
 }
 .logo{
-  width:160px;
+  width:8em;
   margin-top: -3px;
 }
 .space-small{
