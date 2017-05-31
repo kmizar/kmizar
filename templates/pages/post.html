@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 
 
+{% block MetaData %}
+
+<title>{{ postObj.meta_title }}</title>
+<meta name="description" content="{{ postObj.meta_description }}">
+<meta name="keywords"    content="{{ postObj.meta_keywords }}">
+
+{% endblock %}
+
+
 {% block Content %}
 
 <div class="container">
@@ -9,7 +18,7 @@
       {% include "blocks/article.html" with postObj=postObj %}
     </div>
     <div class="col-lg-3 col-md-12">
-      
+
     </div>
   </div>
 </div>
