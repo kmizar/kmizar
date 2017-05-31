@@ -2,8 +2,12 @@
 
 <h1><strong>{{ postObj.title }}</strong></h1>
 
+<a href="/flows/{{ postObj.flow }}" style="margin-right:0.5em" rel="nofollow">
+  <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
+</a>
+
 {% for tag in postObj.tags.all %}
-  <a href="/tags/{{ tag }}" class="space-small">
+  <a href="/tags/{{ tag }}" class="space-small" style="margin-right:0.3em">
     #{{ tag.name|capfirst }}
   </a>
 {% endfor %}
