@@ -14,3 +14,4 @@ Host: https://kmizar.com
 Disallow: /tags/
 
 Clean-param: utm_source&utm_medium&utm_term&utm_campaign /
+Sitemap: https://esquire.ru/sitemap.xml
