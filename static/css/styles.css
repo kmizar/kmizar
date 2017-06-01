@@ -4744,9 +4744,10 @@ tbody.collapse.show {
             column-gap: 1.25rem;
   }
   .card-columns .card {
-    display: inline-block;
     width: 100%;
     margin-bottom: 1.2rem;
+    -webkit-column-break-inside: avoid;
+    -webkit-backface-visibility: hidden;
   }
 }
 
@@ -4760,9 +4761,10 @@ tbody.collapse.show {
             column-gap: 1.25rem;
   }
   .card-columns .card {
-    display: inline-block;
     width: 100%;
     margin-bottom: 1.2rem;
+    -webkit-column-break-inside: avoid;
+    -webkit-backface-visibility: hidden;
   }
 }
 
