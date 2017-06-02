@@ -1,27 +1,25 @@
-<div itemprop="articleBody">
-  <span style="color:#4db6ac">
-    <small>{{ postObj.published_date|date }}</small>
-  </span>
+<span style="color:#4db6ac">
+  <small>{{ postObj.published_date|date }}</small>
+</span>
 
-  <h1 itemprop="headline"><strong>{{ postObj.title }}</strong></h1>
+<h1 itemprop="headline"><strong>{{ postObj.title }}</strong></h1>
 
-  <a href="/flows/{{ postObj.flow }}" style="margin-right:0.5em" rel="nofollow">
-    <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
+<a href="/flows/{{ postObj.flow }}" style="margin-right:0.5em" rel="nofollow">
+  <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
+</a>
+
+{% for tag in postObj.tags.all %}
+  <a href="/tags/{{ tag }}" class="space-small" style="margin-right:0.3em">
+    #{{ tag.name|capfirst }}
   </a>
+{% endfor %}
 
-  {% for tag in postObj.tags.all %}
-    <a href="/tags/{{ tag }}" class="space-small" style="margin-right:0.3em">
-      #{{ tag.name|capfirst }}
-    </a>
-  {% endfor %}
-
-  <div class="card" style="margin-top:2rem;margin-bottom:2rem;">
-    <img itemprop="image" src="{{ postObj.image.url }}" width="100%" alt="{{ postObj.title }}">
-  </div>
-
-  <div class="article-content">
-    {{ postObj.text|safe }}
-  </div>
-
-  <meta itemprop="description" content="{{ postObj.meta_description }}">
+<div class="card" style="margin-top:2rem;margin-bottom:2rem;">
+  <img itemprop="image" src="{{ postObj.image.url }}" width="100%" alt="{{ postObj.title }}">
 </div>
+
+<div itemprop="articleBody" class="article-content">
+  {{ postObj.text|safe }}
+</div>
+
+<meta itemprop="description" content="{{ postObj.meta_description }}">
