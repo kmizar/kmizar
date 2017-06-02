@@ -1,21 +1,36 @@
-<span style="color:#4db6ac"><small>{{ postObj.published_date|date }}</small></span>
+<div itemprop="articleBody">
+  <span itemprop="datePublished" style="color:#4db6ac">
+    <small>{{ postObj.published_date|date }}</small>
+  </span>
 
-<h1><strong>{{ postObj.title }}</strong></h1>
+  <h1 itemprop="headline"><strong>{{ postObj.title }}</strong></h1>
 
-<a href="/flows/{{ postObj.flow }}" style="margin-right:0.5em" rel="nofollow">
-  <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
-</a>
-
-{% for tag in postObj.tags.all %}
-  <a href="/tags/{{ tag }}" class="space-small" style="margin-right:0.3em">
-    #{{ tag.name|capfirst }}
+  <a href="/flows/{{ postObj.flow }}" style="margin-right:0.5em" rel="nofollow">
+    <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
   </a>
-{% endfor %}
 
-<div class="card" style="margin-top:2rem;margin-bottom:2rem;">
-  <img src="{{ postObj.image.url }}" width="100%" alt="{{ postObj.title }}">
-</div>
+  {% for tag in postObj.tags.all %}
+    <a href="/tags/{{ tag }}" class="space-small" style="margin-right:0.3em">
+      #{{ tag.name|capfirst }}
+    </a>
+  {% endfor %}
 
-<div class="article-content">
-  {{ postObj.text|safe }}
+  <div class="card" style="margin-top:2rem;margin-bottom:2rem;">
+    <img itemprop="image" src="{{ postObj.image.url }}" width="100%" alt="{{ postObj.title }}">
+  </div>
+
+  <div class="article-content">
+    {{ postObj.text|safe }}
+  </div>
+
+  <meta itemprop="description" content="{{ postObj.meta_description }}">
+  <meta itemprop="keywords" content="{{ postObj.meta_keywords }}">
+  <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+      <img alt="kmizar.com.ru" itemprop="image url" src="/static/logo/logo.png"/>
+      <meta itemprop="width" content="497">
+      <meta itemprop="height" content="121">
+    </div>
+    <meta itemprop="name" content="kmizar.com">
+  </div>
 </div>
