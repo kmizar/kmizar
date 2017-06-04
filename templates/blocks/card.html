@@ -6,7 +6,7 @@
 
   <div class="card-block">
 
-    <a href="/flows/{{ postObj.flow }}">
+    <a href="/flows/{{ postObj.flow.sys_name }}">
       <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
     </a>
 
@@ -16,7 +16,7 @@
 
     <p class="card-text">
       {% for tag in postObj.tags.all %}
-        <a href="/tags/{{ tag }}" class="space-small">
+        <a href="/tags/{{ tag.sys_name }}" class="space-small">
           <small>#{{ tag.name|capfirst }}</small>
         </a>
       {% endfor %}
