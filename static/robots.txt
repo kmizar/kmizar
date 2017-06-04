@@ -4,13 +4,16 @@ Sitemap: https://kmizar.com/sitemap.xml
 User-agent: Yandex
 Crawl-delay: 0.5
 Disallow: /tags/
+Disallow: /groups-tags/
 
 User-agent: Googlebot
 Crawl-delay: 0.5
 Disallow: /tags/
+Disallow: /groups-tags/
 
 User-agent: *
 Crawl-delay: 1
 Disallow: /tags/
+Disallow: /groups-tags/
 
 Clean-param: utm_source&utm_medium&utm_term&utm_campaign /
