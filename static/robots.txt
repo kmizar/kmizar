@@ -1,17 +1,16 @@
+Host: https://kmizar.com
+Sitemap: https://kmizar.com/sitemap.xml
+
 User-agent: Yandex
 Crawl-delay: 0.5
-Host: https://kmizar.com
 Disallow: /tags/
 
 User-agent: Googlebot
 Crawl-delay: 0.5
-Host: https://kmizar.com
 Disallow: /tags/
 
 User-agent: *
 Crawl-delay: 1
-Host: https://kmizar.com
 Disallow: /tags/
 
 Clean-param: utm_source&utm_medium&utm_term&utm_campaign /
-Sitemap: https://kmizar.com/sitemap.xml
