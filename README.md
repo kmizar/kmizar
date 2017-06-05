@@ -12,6 +12,21 @@
 к картинке всегда прописывать альтернативный текст
 <br>
 к картинке всегда вставлять микроразметку itemprop="image"
+<br>
+## Блок с 2мя картинками
+Размер картинок 700х450
+<br>
+```html
+<div class="row">
+  <div class="col-lg-6 col-sm-12">
+    <div class="card"><img alt="" src="/media/uploads/2017/06/05/bathroom-design2.jpg" style="width: 100%;" /></div>
+  </div>
+  <div class="col-lg-6 col-sm-12">
+    <div class="card"><img alt="" src="/media/uploads/2017/06/05/bathroom-design3.jpg" style="width: 100%;" /></div>
+  </div>
+</div>
+```
+<br>
 ## Div блок, для обращения внимания
 - создаем div-контейнер
 - прописываем классы: alert alert-warning (alert-info, alert-danger, alert-success)
