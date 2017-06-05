@@ -17,7 +17,7 @@
 Размер картинок 700х450
 <br>
 ```html
-<div class="row">
+<div class="row" style="margin-bottom:15px">
   <div class="col-lg-6 col-sm-12">
     <div class="card"><img alt="" src="/media/uploads/2017/06/05/bathroom-design2.jpg" style="width: 100%;" /></div>
   </div>
