@@ -5,15 +5,21 @@ User-agent: Yandex
 Crawl-delay: 0.5
 Disallow: /tags/
 Disallow: /groups-tags/
+Disallow: /flows/
+Disallow: /groups/
 
 User-agent: Googlebot
 Crawl-delay: 0.5
 Disallow: /tags/
 Disallow: /groups-tags/
+Disallow: /flows/
+Disallow: /groups/
 
 User-agent: *
 Crawl-delay: 1
 Disallow: /tags/
 Disallow: /groups-tags/
+Disallow: /flows/
+Disallow: /groups/
 
 Clean-param: utm_source&utm_medium&utm_term&utm_campaign /
