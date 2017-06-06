@@ -5,7 +5,12 @@
 
 <title>{{ postObj.meta_title }}</title>
 <meta name="description" content="{{ postObj.meta_description }}">
-<meta name="keywords"    content="{{ postObj.meta_keywords }}">
+<meta name="keywords" content="{{ postObj.meta_keywords }}">
+
+<meta property="og:title" content="{{ postObj.title }}">
+<meta property="og:image" content="{{ postObj.image }}">
+<meta property="og:description" content="{{ postObj.meta_description }}">
+<meta property="og:image" content="https://kmizar.com/post/{{ postObj.id }}">
 
 {% endblock %}
 
