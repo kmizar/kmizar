@@ -9431,5 +9431,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .article-content img{
- max-width: 100%!important; 
+ max-width: 100%!important;
+ height: auto!important;
 }
