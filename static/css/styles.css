@@ -5175,13 +5175,16 @@ a.badge:focus, a.badge:hover {
 .media-show{
   display: none;
 }
-
+.media-hide{
+  margin: 0;
+}
 @media (max-width: 600px) {
   .media-hide{
     display: none;
   }
   .media-show{
     display: block;
+    margin: 0;
   }
 }
 
