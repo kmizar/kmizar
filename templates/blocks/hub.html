@@ -13,7 +13,7 @@
     <p class="media-hide">{{ groupObj.description|capfirst }}</p>
     <p class="media-show">
       {% for tag in groupObj.tags.all %}
-        <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag.sys_name }}" class="space-small"><small>#{{ tag.name|capfirst }}</small></a>
+        <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag.sys_name }}" class="space-small"><small>#{{ tag.name|capfirst }};</small></a>
       {% endfor %}
     </p>
   </div>
