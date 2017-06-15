@@ -9414,6 +9414,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   color: #2c2d30;
 }
 .article-content h2{
+  margin-top: 30px;
+  margin-bottm: 30px;
   font-family: kmizar;
   color:#177bbb;
 }
