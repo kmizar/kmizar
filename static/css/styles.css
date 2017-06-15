@@ -4836,7 +4836,7 @@ tbody.collapse.show {
 .page-item.disabled .page-link {
   color: #636c72;
   pointer-events: none;
-  cursor: not-allowed;
+  cursor: no-drop;
   background-color: #fff;
   border-color: #ddd;
 }
