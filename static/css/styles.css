@@ -4841,6 +4841,10 @@ tbody.collapse.show {
   border-color: #ddd;
 }
 
+.disabled{
+  cursor: no-drop;
+}
+
 .page-link {
   position: relative;
   display: block;
