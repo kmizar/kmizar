@@ -9409,7 +9409,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .article-content {
-  font-family: Georgia;
+  font-family: Verdana;
+  font-size:.9em;
   color: #2c2d30;
 }
 .article-content h2{
