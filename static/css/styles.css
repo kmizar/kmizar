@@ -4005,7 +4005,7 @@ tbody.collapse.show {
 
 .navbar-toggler-right {
   position: absolute;
-  right: 1rem;
+  right: 0.1rem;
 }
 
 @media (max-width: 575px) {
