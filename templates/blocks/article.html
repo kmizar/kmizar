@@ -2,15 +2,15 @@
   <small>{{ postObj.published_date|date }}</small>
 </span>
 
-<h1 itemprop="headline"><strong>{{ postObj.title }}</strong></h1>
+<h1 itemprop="headline" style="padding-top:20px;padding-bottom:20px"><strong>{{ postObj.title }}</strong></h1>
 
-<a href="/flows/{{ postObj.flow.sys_name }}" style="margin-right:0.5em" rel="nofollow">
+<a href="/flows/{{ postObj.flow.sys_name }}" style="margin-right:0.5em;font-size:larger" rel="nofollow">
   <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
 </a>
 
 {% for tag in postObj.tags.all %}
   <a href="/tags/{{ tag.sys_name }}" class="space-small" style="margin-right:0.3em">
-    #{{ tag.name|capfirst }}
+    #{{ tag.name|capfirst }};
   </a>
 {% endfor %}
 
