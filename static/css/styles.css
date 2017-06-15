@@ -9409,9 +9409,11 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .article-content {
+  font-family: Georgia;
   color: #2c2d30;
 }
 .article-content h2{
+  font-family: kmizar;
   color:#177bbb;
 }
 .article-content .alert-warning{
