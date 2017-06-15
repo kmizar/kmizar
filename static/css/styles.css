@@ -4748,6 +4748,7 @@ tbody.collapse.show {
     margin-bottom: 1.2rem;
     -webkit-column-break-inside: avoid;
     -webkit-backface-visibility: hidden;
+    display: inline-block;
   }
 }
 
@@ -4765,6 +4766,7 @@ tbody.collapse.show {
     margin-bottom: 1.2rem;
     -webkit-column-break-inside: avoid;
     -webkit-backface-visibility: hidden;
+    display: inline-block;
   }
 }
 
