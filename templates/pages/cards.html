@@ -3,9 +3,20 @@
 
 {% block MetaData %}
 
-<title>{{ page_title }} | kmizar.com</title>
-<meta name="description" content="Советы и статьи о ремонте, идеи дизайна и планировки помещений.">
-<meta itemprop="description" content="Советы по ремонту и дизайну помещений и дачных участков.">
+<title>Журнал о ремонте | kmizar.com</title>
+<meta name="description" lang="ru" content="Советы и статьи о ремонте, идеи дизайна и планировки помещений.">
+<meta name="keywords" content="Как делать ремонт, Советы ремонт, Идеи дизайна помещений, Дачный участок">
+
+<div xmlns:v="http://rdf.data-vocabulary.org/#">
+  <span typeof="v:Breadcrumb"><a href="http://kmizar.com/" rel="v:url" property="v:title">kmizar.com</a> → </span>
+  <span typeof="v:Breadcrumb"><a href="http://kmizar.com/" rel="v:url" property="v:title">главная</a> → </span>
+  <span typeof="v:Breadcrumb">Текущая категория</span>
+</div>
+
+<meta property="og:title" content="Kmizar - журнал о ремонте">
+<meta property="og:image" content="/static/logo/logo.png">
+<meta property="og:description" content="Советы по ремонту и дизайну помещений и дачных участков.">
+<meta property="og:url" content="https://kmizar.com">
 
 {% endblock %}
 
@@ -18,42 +29,40 @@
   </div>
 
   {% else %}
-    <div itemscope itemtype="http://schema.org/Blog">
-      <div class="container" style="width:100%; max-width:1280px;">
+    <div class="container" style="width:100%; max-width:1280px;">
 
-        <div class="row" style="padding-bottom:30px">
-          <div class="col">
-            <h1 class="text-right" style="margin:0">{{ page_title }}</h1>
-          </div>
+      <div class="row" style="padding-bottom:30px">
+        <div class="col">
+          <h1 class="text-right" style="margin:0">{{ page_title }}</h1>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="card-columns">
-              {% for postObj in postObj_list %}
-                {% include "blocks/card.html" with postObj=postObj %}
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-
-        <nav aria-label="page navigation" style="margin-top:30px">
-          <ul class="pagination">
-            {% if postObj_list.has_previous %}
-              <li class="page-item"><a class="page-link" href="?page={{ postObj_list.previous_page_number }}">Туда</a></li>
-              <li class="page-item"><a class="page-link" href="?page={{ postObj_list.previous_page_number }}">{{ postObj_list.previous_page_number }}</a></li>
-            {% else %}
-              <li class="page-item disabled"><a class="page-link">Туда</a></li>
-            {% endif %}
-            <li class="page-item active"><a class="page-link">{{ postObj_list.number }}</a></li>
-            {% if postObj_list.has_next %}
-              <li class="page-item"><a class="page-link" href="?page={{ postObj_list.next_page_number }}">{{ postObj_list.next_page_number }}</a></li>
-              <li class="page-item"><a class="page-link" href="?page={{ postObj_list.next_page_number }}">Сюда</a></li>
-            {% else %}
-              <li class="page-item disabled"><a class="page-link">Сюда</a></li>
-            {% endif %}
-          </ul>
-        </nav>
       </div>
+      <div class="row">
+        <div class="col">
+          <div class="card-columns">
+            {% for postObj in postObj_list %}
+              {% include "blocks/card.html" with postObj=postObj %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <nav aria-label="page navigation" style="margin-top:30px">
+        <ul class="pagination">
+          {% if postObj_list.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.previous_page_number }}">Туда</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.previous_page_number }}">{{ postObj_list.previous_page_number }}</a></li>
+          {% else %}
+            <li class="page-item disabled"><a class="page-link">Туда</a></li>
+          {% endif %}
+          <li class="page-item active"><a class="page-link">{{ postObj_list.number }}</a></li>
+          {% if postObj_list.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.next_page_number }}">{{ postObj_list.next_page_number }}</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ postObj_list.next_page_number }}">Сюда</a></li>
+          {% else %}
+            <li class="page-item disabled"><a class="page-link">Сюда</a></li>
+          {% endif %}
+        </ul>
+      </nav>
     </div>
   {% endif %}
 

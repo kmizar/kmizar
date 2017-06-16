@@ -1,34 +1,29 @@
-<div itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="card">
+<a href="/post/{{ postObj.id }}/" rel="nofollow">
+  <img class="card-img-top img-fluid" src="{{ postObj.image.url }}" alt="{{ postObj.title|upper }}">
+</a>
 
-  <a href="/post/{{ postObj.id }}/" rel="nofollow">
-    <img itemprop="image" class="card-img-top img-fluid" src="{{ postObj.image.url }}" alt="{{ postObj.title|upper }}">
+<div class="card-block">
+
+  <a href="/flows/{{ postObj.flow.sys_name }}" style="font-size:larger">
+    <span class="badge badge-default" style="margin-bottom:0.5em;margin-top:0.5em">{{ postObj.flow.name|upper }}</span>
   </a>
 
-  <div class="card-block">
+  <a href="/post/{{ postObj.id }}/">
+    <h2 class="card-title"><small>{{ postObj.title|upper }}</small></h2>
+  </a>
 
-    <a href="/flows/{{ postObj.flow.sys_name }}" style="font-size:larger">
-      <span class="badge badge-default" style="margin-bottom:0.5em;margin-top:0.5em">{{ postObj.flow.name|upper }}</span>
-    </a>
+  <p class="card-text">
+    {% for tag in postObj.tags.all %}
+      <a href="/tags/{{ tag.sys_name }}" class="space-small" style="font-size:.9em">
+        #{{ tag.name|capfirst }};
+      </a>
+    {% endfor %}
+  </p>
 
-    <a itemprop="mainEntityOfPage" href="/post/{{ postObj.id }}/">
-      <h2 itemprop="headline" class="card-title"><small>{{ postObj.title|upper }}</small></h2>
-    </a>
-
-    <p class="card-text">
-      {% for tag in postObj.tags.all %}
-        <a href="/tags/{{ tag.sys_name }}" class="space-small" style="font-size:.9em">
-          #{{ tag.name|capfirst }};
-        </a>
-      {% endfor %}
-    </p>
-
-    <p class="card-text" style="margin:0">
-      <span style="color:#4db6ac">
-        <small>{{ postObj.published_date|date }}</small>
-      </span>
-    </p>
-
-    <meta itemprop="description" content="{{ postObj.meta_description }}">
-  </div>
+  <p class="card-text" style="margin:0">
+    <span style="color:#4db6ac">
+      <small>{{ postObj.published_date|date }}</small>
+    </span>
+  </p>
 
 </div>
