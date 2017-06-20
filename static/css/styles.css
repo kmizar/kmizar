@@ -4431,7 +4431,7 @@ tbody.collapse.show {
 }
 
 .card-title {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: 1.8rem;
   line-height: 0.9;
   margin-top: 0.75rem;
@@ -4447,7 +4447,7 @@ tbody.collapse.show {
 }
 
 .card-text {
- margin-top:1rem;
+ margin-top:1.5rem;
  margin-bottom:0;
 }
 
