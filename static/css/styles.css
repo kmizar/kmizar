@@ -331,18 +331,13 @@ html {
   width: device-width;
 }
 
-@font-face {
-  font-family: "kmizar";
-  src: url('../fonts/kmizar.otf');
-}
-
 html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  font-family: kmizar, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Verdana, sans-serif;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -5658,7 +5653,6 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: kmizar, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5762,7 +5756,6 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: kmizar, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -9409,14 +9402,12 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .article-content {
-  font-family: Verdana;
   font-size:.9em;
   color: #2c2d30;
 }
 .article-content h2{
   margin-top: 30px;
   margin-bottom: 30px;
-  font-family: kmizar;
   color:#177bbb;
 }
 .article-content .alert-warning{
