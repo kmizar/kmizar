@@ -4446,6 +4446,11 @@ tbody.collapse.show {
   margin-bottom: 0;
 }
 
+.card-text {
+ margin-top:1rem;
+ margin-bottom:0;
+}
+
 .card-text:last-child {
   margin-bottom: 0;
 }
