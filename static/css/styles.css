@@ -9424,6 +9424,16 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-size: 0.9em;
 }
 
+.media h2{
+  color:#262626;
+}
+.media h2:hover{
+  color:#7b7b7b;
+}
+.media p{
+  color:#7b7b7b;
+}
+
 .flows-menu{
   color:#7b7b7b;
   padding-left: 1em;
