@@ -1,8 +1,8 @@
-<span style="color:#7b7b7b">
+<span style="color:#7b7b7b;font-size:.9rem">
   {{ postObj.published_date|date }}
 </span>
 
-<h1 itemprop="headline" style="padding-top:20px;padding-bottom:20px"><strong>{{ postObj.title }}</strong></h1>
+<h1 itemprop="headline" style="padding-bottom:20px"><strong>{{ postObj.title }}</strong></h1>
 
 <a href="/flows/{{ postObj.flow.sys_name }}" style="margin-right:0.5em;font-size:larger" rel="nofollow">
   <span class="badge badge-default">{{ postObj.flow.name|upper }}</span>
