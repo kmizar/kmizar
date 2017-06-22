@@ -4840,7 +4840,7 @@ tbody.collapse.show {
 }
 
 .page-item.disabled .page-link {
-  color: #636c72;
+  color: #b88b58;
   pointer-events: none;
   cursor: no-drop;
   background-color: #fff;
@@ -4862,10 +4862,10 @@ tbody.collapse.show {
 }
 
 .page-link:focus, .page-link:hover {
-  color: #014c8c;
+  color: #262626;
   text-decoration: none;
-  background-color: #eceeef;
-  border-color: #ddd;
+  background-color: #dcdbda;
+  border-color: #c3c3c3;
 }
 
 .pagination-lg .page-link {
