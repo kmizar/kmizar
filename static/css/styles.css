@@ -4844,7 +4844,7 @@ tbody.collapse.show {
   pointer-events: none;
   cursor: no-drop;
   background-color: #fff;
-  border-color: #ddd;
+  border-color: #c3c3c3;
 }
 
 .disabled{
