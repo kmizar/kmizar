@@ -4835,8 +4835,8 @@ tbody.collapse.show {
 
 .page-item.active .page-link {
   z-index: 2;
-  color: #4c5d6e;
-  background-color: #e9edf4;
+  color: #262626;
+  background-color: #7b7b7b;
 }
 
 .page-item.disabled .page-link {
@@ -4857,7 +4857,6 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #0275d8;
   background-color: #fff;
   border: 1px solid #c3c3c3;
 }
