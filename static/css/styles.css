@@ -4933,17 +4933,9 @@ a.badge:focus, a.badge:hover {
 }
 
 .badge-default {
-  color:#177bbb;
-  border: 1px solid #177bbb;
+  color:#7b7b7b;
+  border: 1px solid #c3c3c3;
   cursor: pointer;
-}
-.badge-default:hover{
-  color:#52aee8;
-  border-color:#52aee8;
-}
-
-.badge-default[href]:focus, .badge-default[href]:hover {
-  background-color: #4b5257;
 }
 
 .badge-primary {
