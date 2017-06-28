@@ -5142,7 +5142,7 @@ a.badge:focus, a.badge:hover {
 }
 
 .media {
-  margin 1em 1em 1em 1em;
+  margin: 1em 1em 1em 1em;
   padding-top: 1em;
   padding-bottom: 1em;
   border: 1px solid #c3c3c3;
