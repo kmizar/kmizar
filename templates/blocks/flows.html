@@ -1,7 +1,7 @@
 <div class="card card-outline-secondary mb-3 card-md-hide">
   <div class="card-block">
     <blockquote class="card-blockquote">
-      <h2>Разделы:</h2>
+      <h2 style="margin-bottom:.5em">Разделы:</h2>
       {% for flowObj in flowObj_list %}
         <a href="{{ flowObj.sys_name }}"><p class="flows-menu">{{ flowObj.name|capfirst }}</p></a>
       {% endfor %}
