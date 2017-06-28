@@ -9405,7 +9405,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 .article-content {
   font-size:.9em;
-  color: #2c2d30;
+  color: #262626;
+  background-color: #fff;
+  padding: 1em;  
 }
 .article-content h2{
   margin-top: 30px;
