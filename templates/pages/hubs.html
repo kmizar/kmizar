@@ -22,7 +22,6 @@
     <div class="col-lg-9 col-md-12">
       <h1 class="text-left" style="padding-bottom:10px">Рубрики</h1>
       {% for groupObj in groupObj_list %}
-        <hr>
         {% include "blocks/hub.html" with groupObj=groupObj %}
       {% endfor %}
       <hr>
