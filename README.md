@@ -1,8 +1,7 @@
 # Release Notes
-
-`релиз: 14`
-<br>
 **В проде с 30.06.2017**
+<br>
+`релиз: 14`
 <br>
 ### Bugs
 - #1 Вернули line-height к body
