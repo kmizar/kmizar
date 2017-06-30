@@ -9426,9 +9426,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .article-content em{
   color: #7b7b7b; 
 }
-.article-content .alert-warning{
-  font-size: 0.9em;
-}
 
 .media h2{
   color:#262626;
