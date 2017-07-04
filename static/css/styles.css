@@ -4630,6 +4630,8 @@ tbody.collapse.show {
 
 .card-img {
   border-radius: calc(0.25rem - 1px);
+  width: 100%;
+  height: auto;
 }
 
 .card-img-overlay {
@@ -9411,7 +9413,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-size:.9em;
   color: #262626;
   background-color: #fff;
-  padding: 1em;  
+  padding: 1em;
 }
 .article-content h2{
   margin-top: 30px;
@@ -9424,7 +9426,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-size: 1.3em;
 }
 .article-content em{
-  color: #7b7b7b; 
+  color: #7b7b7b;
 }
 
 .media h2{
