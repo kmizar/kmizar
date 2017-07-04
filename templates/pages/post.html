@@ -22,8 +22,8 @@
     <div class="row">
       <div class="col-lg-9 col-md-12">
         {% include "blocks/article.html" with postObj=postObj %}
-        {% if recoDumper %}
-          {% include "services/recoman/recoman_block.html" with recoDumper=recoDumper %}
+        {% if recoObj_list %}
+          {% include "services/recoman/recoman_block.html" with recoObj_list=recoObj_list %}
         {% endif %}
       </div>
       <div class="col-lg-3 col-md-12">
