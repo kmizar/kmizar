@@ -5211,7 +5211,7 @@ a.badge:focus, a.badge:hover {
 
 .list-group-item-action {
   width: 100%;
-  color: #464a4c;
+  color: #262626;
   text-align: inherit;
 }
 
@@ -5246,18 +5246,12 @@ a.badge:focus, a.badge:hover {
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #c3c3c3;
 }
 
-.list-group-item:first-child {
-  border-top-right-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-}
 
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .list-group-item:focus, .list-group-item:hover {
@@ -9248,11 +9242,11 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .text-muted {
-  color: #636c72 !important;
+  color: #7b7b7b !important;
 }
 
 a.text-muted:focus, a.text-muted:hover {
-  color: #4b5257 !important;
+  color: #262626 !important;
 }
 
 .text-primary {

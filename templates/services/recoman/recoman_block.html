@@ -1,13 +1,16 @@
-<h3><strong>Читайте также:</strong></h3>
-<div class="row" style="margin-top:1em">
+<h2><strong>Читайте также:</strong></h2>
+<div class="list-group" style="margin-top:1em">
   {% for recoObj in recoObj_list %}
-    <div class="col-lg-2 col-md-4 col-sm-6">
-      <div class="card card-inverse" style="border:none;margin-bottom:30px">
-        <img class="card-img" src="{{ recoObj.image.url }}" alt="{{ postObj.title }}">
-        <div class="card-img-overlay">
-          <h4 class="card-title" style="font-size:.8em">{{ postObj.title }}</h4>
-        </div>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h4 class="mb-1">{{ recoObj.title }}</h4>
+        <small class="text-muted">{{ recoObj.published_date|date }}</small>
       </div>
-    </div>
+      <small style="color:#b88b58">
+        {% for tag in recoObj.tags.all %}
+          #{{ tag }}
+        {% endfor %}
+      </small>
+    </a>
   {% endfor %}
 </div>
