@@ -1,15 +1,18 @@
 <h2><strong>Читайте также:</strong></h2>
 <div class="list-group" style="margin-top:1em">
   {% for recoObj in recoObj_list %}
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <a href="/post/{{ recoObj.id }}" class="list-group-item list-group-item-action flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
         <h4 class="mb-1">{{ recoObj.title }}</h4>
         <small class="text-muted">{{ recoObj.published_date|date }}</small>
       </div>
-      <small style="color:#b88b58">
-        {% for tag in recoObj.tags.all %}
-          #{{ tag }}
-        {% endfor %}
+      <small>
+        <span>{{ recoObj.flow }}:</span>
+        <span style="color:#b88b58">
+          {% for tag in recoObj.tags.all %}
+            {{ tag }}
+          {% endfor %}
+        </span>
       </small>
     </a>
   {% endfor %}

@@ -5219,10 +5219,8 @@ a.badge:focus, a.badge:hover {
   color: #292b2c;
 }
 
-.list-group-item-action:focus, .list-group-item-action:hover {
-  color: #464a4c;
-  text-decoration: none;
-  background-color: #f7f7f9;
+.list-group-item-action:focus, .list-group-item-action:hover h4{
+  color: #7b7b7b;
 }
 
 .list-group-item-action:active {
