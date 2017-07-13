@@ -4416,7 +4416,6 @@ tbody.collapse.show {
           flex-direction: column;
   background-color: #fff;
   border: 1px solid #c3c3c3;
-  border-radius: 0.25rem;
 }
 
 @media (max-width: 991px) {
@@ -4639,16 +4638,6 @@ tbody.collapse.show {
   bottom: 0;
   left: 0;
   padding: 1.25rem;
-}
-
-.card-img-top {
-  border-top-right-radius: calc(0.25rem - 1px);
-  border-top-left-radius: calc(0.25rem - 1px);
-}
-
-.card-img-bottom {
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
 @media (min-width: 576px) {
