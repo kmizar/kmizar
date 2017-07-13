@@ -2276,7 +2276,7 @@ pre code {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #636c72;
+  color: #262626;
   opacity: 1;
 }
 
@@ -2291,7 +2291,7 @@ pre code {
 }
 
 .form-control::placeholder {
-  color: #636c72;
+  color: #7b7b7b;
   opacity: 1;
 }
 
@@ -3458,6 +3458,10 @@ tbody.collapse.show {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+}
+
+.form-control:focus {
+  border-color: #b88b58;
 }
 
 .input-group .form-control {
