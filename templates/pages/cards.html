@@ -27,15 +27,17 @@
 
       <div class="row" style="padding-bottom:30px">
         <div class="col-xl-6 col-md-6 col-sm-5">
+
           <form method="post" action="/tags/">
             {% csrf_token %}
             <div class="input-group">
-              <input type="text" class="form-control" name="tag" placeholder="Поиск по тегам...">
+              {{ searcher_form }}
               <span class="input-group-btn">
                 <button class="btn btn-secondary" type="submit">Найти</button>
               </span>
             </div>
           </form>
+
         </div>
         <div class="col-xl-6 col-md-6 col-sm-7 media-hide">
           <h1 class="text-right" style="margin:0">{{ page_title }}</h1>
