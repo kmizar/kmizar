@@ -11,14 +11,11 @@
 <meta property="og:image" content="/static/logo/logo.png">
 <meta property="og:description" content="Советы по ремонту и дизайну помещений и дачных участков.">
 <meta property="og:url" content="https://kmizar.com">
+
+<!-- searcher -->
+{% load static from staticfiles %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-{% endblock %}
-
-
-{% block Scripts %}
-
-
+<link href="{% static "css/searcher.css" %}" rel="stylesheet" media="screen"/>
 
 {% endblock %}
 
@@ -32,16 +29,11 @@
 
   {% else %}
     <div class="container" style="width:100%; max-width:1280px;">
-
       <div class="row" style="padding-bottom:30px">
         <div class="col-xl-6 col-md-6 col-sm-5">
-
           <form method="post" action="/tags/">
             {% csrf_token %}
-            
-
             <div class="input-group">
-
               {{ searcher_form }}
               <script type="text/javascript">
               $(".js-example-basic-multiple").select2();
@@ -51,7 +43,6 @@
               </span>
             </div>
           </form>
-
         </div>
         <div class="col-xl-6 col-md-6 col-sm-7 media-hide">
           <h1 class="text-right" style="margin:0">{{ page_title }}</h1>
@@ -66,7 +57,6 @@
           </div>
         </div>
       </div>
-
       <nav aria-label="page navigation" style="margin-top:30px">
         <ul class="pagination">
           {% if postObj_list.has_previous %}
