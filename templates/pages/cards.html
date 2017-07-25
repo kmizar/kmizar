@@ -11,17 +11,15 @@
 <meta property="og:image" content="/static/logo/logo.png">
 <meta property="og:description" content="Советы по ремонту и дизайну помещений и дачных участков.">
 <meta property="og:url" content="https://kmizar.com">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 {% endblock %}
 
 
 {% block Scripts %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-<script type="text/javascript">
-$(".js-example-basic-multiple").select2();
-</script>
+
+
 {% endblock %}
 
 
@@ -40,8 +38,14 @@ $(".js-example-basic-multiple").select2();
 
           <form method="post" action="/tags/">
             {% csrf_token %}
+            
+
             <div class="input-group">
+
               {{ searcher_form }}
+              <script type="text/javascript">
+              $(".js-example-basic-multiple").select2();
+              </script>
               <span class="input-group-btn">
                 <button class="btn btn-secondary" type="submit">Найти</button>
               </span>
