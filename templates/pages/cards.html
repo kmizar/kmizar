@@ -36,7 +36,14 @@
             <div class="input-group">
               {{ searcher_form }}
               <script type="text/javascript">
-              $(".js-example-basic-multiple").select2();
+              $("select").select2({
+                placeholder: "Поиск по тегам...",
+                minimumInputLength: 1,
+                language: {
+                  inputTooShort: function () { return none; },
+                  noResults: function () { return 'Не найдено';},
+                },
+              });
               </script>
               <span class="input-group-btn">
                 <button class="btn btn-secondary" type="submit">Найти</button>
@@ -45,7 +52,7 @@
           </form>
         </div>
         <div class="col-xl-6 col-md-6 col-sm-7 media-hide">
-          <h1 class="text-right" style="margin:0">{{ page_title }}</h1>
+          <h1 class="text-right" style="margin:0;color:#656c7a">{{ page_title }}</h1>
         </div>
       </div>
       <div class="row">
