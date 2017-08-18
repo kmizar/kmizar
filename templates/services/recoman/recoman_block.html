@@ -4,6 +4,7 @@
 
 {% for recoObj in recoObj_list %}
   <div class="col-lg-6 col-md-12">
+    <div class="card-block" style="margin-top:2rem">
     <a href="/post/{{ recoObj.id }}" class="list-group-item list-group-item-action flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
         <h4 class="mb-1">{{ recoObj.title }}</h4>
@@ -18,5 +19,6 @@
         </span>
       </small>
     </a>
+  </div>
   </div>
 {% endfor %}
