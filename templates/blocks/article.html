@@ -1,24 +1,25 @@
-<span style="color:#7b7b7b;font-size:.9rem">
-  {{ postObj.published_date|date }}
-</span>
-
-<h1 itemprop="headline" class="space-small" style="padding-bottom:20px"><strong>{{ postObj.title }}</strong></h1>
-
-<a href="/flows/{{ postObj.flow.sys_name }}" style="margin-right:0.5em;font-size:larger" rel="nofollow">
-  <span class="badge badge-default" style="color:{{ postObj.flow.color }};border-color:{{ postObj.flow.color }}">
-    {{ postObj.flow.name|upper }}
-  </span>
-</a>
-
-{% for tag in postObj.tags.all %}
-  <a href="/tags/{{ tag.sys_name }}" class="space-small" style="margin-right:0.3em">
-    #{{ tag.name|capfirst }};
+<div style="margin-bottom:1rem">
+  <a href="/flows/{{ postObj.flow.sys_name }}" style="margin-right:0.5em;font-size:larger" rel="nofollow">
+    <span class="badge badge-default" style="color:{{ postObj.flow.color }};border-color:{{ postObj.flow.color }}">
+      {{ postObj.flow.name|upper }}
+    </span>
   </a>
-{% endfor %}
 
-<div class="card" style="margin-top:2rem;margin-bottom:2rem;">
-  <img itemprop="image" src="{{ postObj.image.url }}" width="100%" alt="{{ postObj.title }}">
+  {% for tag in postObj.tags.all %}
+    <a href="/tags/{{ tag.sys_name }}" class="space-small" style="margin-right:0.3em">
+      #{{ tag.name|capfirst }};
+    </a>
+  {% endfor %}
 </div>
+
+<div style="margin-bottom:2rem">
+  <h1 itemprop="headline" class="space-small"><strong>{{ postObj.title }}</strong></h1>
+
+  <p style="color:#7b7b7b;font-size:.9rem">
+    {{ postObj.published_date|date }}
+  </p>
+</div>
+
 <div itemprop="articleBody" class="article-content">
   {{ postObj.text|safe }}
 </div>

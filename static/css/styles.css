@@ -9409,9 +9409,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .article-content {
   font-size:1.1em;
   color: #202121;
+  margin-bottom: 2rem;
 }
 .article-content h2{
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: 600!important;
 }
@@ -9485,4 +9486,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .mobile-footer-padding{
     padding-bottom:2rem;
   }
+}
+.article-img{
+  width: 100%;
+  height: 400px;
+  background-repeat     : no-repeat;
+  background-size       : cover;
+  background-position-x : 50%;
+  background-position-y : 50%;
+  margin-bottom: 2rem;
 }
