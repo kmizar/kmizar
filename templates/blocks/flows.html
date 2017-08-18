@@ -3,7 +3,7 @@
     <blockquote class="card-blockquote" style="border:1px solid #c0c0c0">
       <h2 style="margin-bottom:.5em">Разделы:</h2>
       {% for flowObj in flowObj_list %}
-        <p class="flows-menu"><a href="{{ flowObj.sys_name }}">{{ flowObj.name|capfirst }}</a></p>
+        <p class="flows-menu"><a href="{{ flowObj.sys_name }}" class="color-purple">{{ flowObj.name|capfirst }}</a></p>
       {% endfor %}
     </blockquote>
   </div>

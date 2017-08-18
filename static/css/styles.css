@@ -547,7 +547,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 h2, .h2 {
@@ -5201,6 +5202,9 @@ a.badge:focus, a.badge:hover {
     display: block;
     margin: 0;
   }
+  .row-card-padding{
+    padding-bottom:30px!important;
+  }
 }
 
 .list-group {
@@ -9432,9 +9436,6 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .media h2:hover{
   color:#677883;
 }
-.media p{
-  color:#677883;
-}
 
 .flows-menu{
   color:#677883;
@@ -9485,9 +9486,38 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     padding-bottom:1.5rem;
   }
   .mobile-footer-padding{
-    padding-bottom:2rem;
+    padding-bottom:1rem;
   }
 }
+
+.row-card-padding{
+  padding-bottom:25px
+}
+@media (max-width:1280px) {
+  .article-img-layout{
+    padding-left: 0;
+    padding-right:0;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0!important;
+  }
+}
+@media (max-width: 792px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+@media (max-width: 1199px) {
+  .cards-h1 {
+    text-align: left!important;
+    margin-top: 1rem;
+  }
+  .row-card-padding{
+    padding-bottom:10px;
+  }
+}
+
 .article-img{
   width: 100%;
   height: 400px;
@@ -9504,4 +9534,17 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   background-size       : cover;
   background-position-x : 50%;
   background-position-y : 50%;
+}
+
+.color-purple{
+  color:#85267b;
+}
+.color-black{
+  color:#202121;
+}
+.color-gray{
+  color:#656c7a;
+}
+.color-blue{
+  color:#2779a7;
 }

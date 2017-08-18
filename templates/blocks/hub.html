@@ -10,8 +10,8 @@
     <a href="/groups/{{ groupObj.sys_name }}">
       <h2>{{ groupObj.name|capfirst }}</h2>
     </a>
-    <p class="media-hide">{{ groupObj.description|capfirst }}</p>
-    <p class="media-show">
+    <p class="media-hide color-gray">{{ groupObj.description|capfirst }}</p>
+    <p class="media-show color-gray">
       {% for tag in groupObj.tags.all %}
         <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag.sys_name }}" class="space-small"><small>#{{ tag.name|capfirst }};</small></a>
       {% endfor %}
@@ -23,5 +23,5 @@
       <a href="/groups-tags/{{ groupObj.sys_name }}-{{ tag.sys_name }}" class="space-small"><small>#{{ tag.name|capfirst }};</small></a>
     {% endfor %}
   </div>
-  
+
 </div>
