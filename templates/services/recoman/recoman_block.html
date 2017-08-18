@@ -1,14 +1,13 @@
-<div class="col-lg-12">
+<div class="col-lg-12" style="margin-bottom:1rem">
   <h2><strong>Читайте также:</strong></h2>
 </div>
 {% for recoObj in recoObj_list %}
   <div class="col-lg-3 col-md-4 col-sm-6">
     <a href="/post/{{ recoObj.id }}/" rel="nofollow">
       <div style="background-image: url({{ recoObj.image.url }}); background-color: #fff" class="card recoman-img" itemprop="image"></div>
-      <span>
-          {{ recoObj.flow.name|lower }}
-      </span>
-      <h5 class="mb-1">{{ recoObj.title }}</h5>
+      <div class="card-block">
+        <h6 class="mb-1">{{ recoObj.title }}</h6>
+      </div>
     </a>
   </div>
 {% endfor %}
